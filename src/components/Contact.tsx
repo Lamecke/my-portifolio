@@ -12,7 +12,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null)
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -20,7 +20,7 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus(null)
