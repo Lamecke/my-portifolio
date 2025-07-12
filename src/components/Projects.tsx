@@ -112,7 +112,7 @@ const Projects = () => {
   }, [])
 
   const getLanguageColor = (language: string) => {
-    const colors = {
+    const colors: Record<string, string> = {
       JavaScript: 'bg-yellow-500',
       TypeScript: 'bg-blue-500',
       Python: 'bg-green-500',
@@ -120,7 +120,8 @@ const Projects = () => {
       CSS: 'bg-purple-500',
       HTML: 'bg-orange-500'
     }
-    return colors[language as string] || 'bg-gray-500'
+
+    return colors[language] || 'bg-gray-500'
   }
 
   if (loading) {
