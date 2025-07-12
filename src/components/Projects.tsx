@@ -111,7 +111,7 @@ const Projects = () => {
     loadProjects()
   }, [])
 
-  const getLanguageColor = (language: string) => {
+  const getLanguageColor = (language) => {
     const colors = {
       JavaScript: 'bg-yellow-500',
       TypeScript: 'bg-blue-500',
