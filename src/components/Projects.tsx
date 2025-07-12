@@ -2,13 +2,25 @@ import { useState, useEffect } from 'react'
 import { Github, ExternalLink, Star, GitFork } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 
+type Project = {
+  id: number
+  name: string
+  description: string
+  html_url: string
+  homepage: string | null
+  language: string
+  stargazers_count: number
+  forks_count: number
+  topics: string[]
+}
+
 const Projects = () => {
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)
 
   // Projetos de exemplo (substitua pela integração real com GitHub API)
-  const exampleProjects = [
+  const exampleProjects: any = [
     {
       id: 1,
       name: "E-commerce React",
@@ -99,7 +111,7 @@ const Projects = () => {
     loadProjects()
   }, [])
 
-  const getLanguageColor = (language: any) => {
+  const getLanguageColor = (language: String) => {
     const colors = {
       JavaScript: 'bg-yellow-500',
       TypeScript: 'bg-blue-500',
