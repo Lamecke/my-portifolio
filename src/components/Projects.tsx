@@ -20,7 +20,7 @@ const Projects = () => {
   const [error, setError] = useState<string | null>(null)
 
   // Projetos de exemplo (substitua pela integração real com GitHub API)
-  const exampleProjects: any = [
+  const exampleProjects: Project[] = [
     {
       id: 1,
       name: "E-commerce React",
@@ -111,7 +111,7 @@ const Projects = () => {
     loadProjects()
   }, [])
 
-  const getLanguageColor = (language: String) => {
+  const getLanguageColor = (language: string) => {
     const colors = {
       JavaScript: 'bg-yellow-500',
       TypeScript: 'bg-blue-500',
