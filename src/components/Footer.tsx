@@ -1,4 +1,4 @@
-import { Heart, Github, Linkedin, Mail, ArrowUp, MonitorCog } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowUp, MonitorCog } from 'lucide-react'
 
 const Footer = () => {
   const scrollToTop = () => {

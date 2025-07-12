@@ -3,7 +3,12 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-rea
 import { Button } from '@/components/ui/button.jsx'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    name: string
+    email: string
+    subject: string
+    message: string
+  }>({
     name: '',
     email: '',
     subject: '',
@@ -12,7 +17,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -20,7 +25,7 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus(null)

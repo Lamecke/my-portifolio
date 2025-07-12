@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button.jsx'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const scrollToSection = (sectionId: any) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })

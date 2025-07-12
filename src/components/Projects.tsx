@@ -222,7 +222,7 @@ const Projects = () => {
                 {/* Project Topics */}
                 {project.topics && project.topics.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.topics.slice(0, 3).map((topic, index) => (
+                    {project.topics.slice(0, 3).map((topic: string, index: number) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
