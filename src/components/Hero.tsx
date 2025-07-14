@@ -1,5 +1,6 @@
 import { ArrowDown, Download } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
+import cv from '@/assets/cv.pdf'
 
 const Hero = () => {
   const scrollToSection = (sectionId: any) => {
@@ -47,6 +48,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
+              onClick={() => downloadPdfFromUrl(cv, 'Lamecke_Bruno_CV.pdf')}
               className="text-lg px-8 py-6 hover:scale-105 transition-transform"
             >
               <Download className="mr-2" size={20} />
@@ -67,6 +69,14 @@ const Hero = () => {
       </div>
     </section>
   )
+}
+function downloadPdfFromUrl(pdfUrl: string, filename: string): void {
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 export default Hero
