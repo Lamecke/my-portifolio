@@ -23,10 +23,10 @@ const Projects = () => {
   const exampleProjects: Project[] = [
     {
       id: 1,
-      name: "E-commerce React",
+      name: "E-commerce React Frontend",
       description: "Aplicação completa de e-commerce desenvolvida com React, Node.js e MongoDB. Inclui carrinho de compras, sistema de pagamento e painel administrativo.",
-      html_url: "https://github.com/usuario/ecommerce-react",
-      homepage: "https://ecommerce-demo.vercel.app",
+      html_url: "https://github.com/Lamecke/frontend-ecommerce",
+      homepage: "",
       language: "JavaScript",
       stargazers_count: 45,
       forks_count: 12,
@@ -34,6 +34,17 @@ const Projects = () => {
     },
     {
       id: 2,
+      name: "E-commerce Typescript Backend",
+      description: "Aplicação backend completa de e-commerce desenvolvida com typescript, Node.js e MongoDB. Inclui carrinho de compras, sistema de pagamento e painel administrativo.",
+      html_url: "https://github.com/Lamecke/backend-ecommerce",
+      homepage: "",
+      language: "TypeScript",
+      stargazers_count: 45,
+      forks_count: 12,
+      topics: ["nodejs", "mongodb", "ecommerce"]
+    },
+    {
+      id: 3,
       name: "Task Manager App",
       description: "Aplicativo de gerenciamento de tarefas com React Native. Funcionalidades incluem criação, edição, categorização e sincronização em tempo real.",
       html_url: "https://github.com/usuario/task-manager",
@@ -44,7 +55,7 @@ const Projects = () => {
       topics: ["react-native", "typescript", "firebase", "mobile"]
     },
     {
-      id: 3,
+      id: 4,
       name: "Weather Dashboard",
       description: "Dashboard interativo de clima com gráficos e previsões. Desenvolvido com React, Chart.js e integração com APIs de clima.",
       html_url: "https://github.com/usuario/weather-dashboard",
@@ -54,39 +65,7 @@ const Projects = () => {
       forks_count: 15,
       topics: ["react", "chartjs", "weather-api", "dashboard"]
     },
-    {
-      id: 4,
-      name: "Blog CMS",
-      description: "Sistema de gerenciamento de conteúdo para blogs com editor rich text, sistema de comentários e SEO otimizado.",
-      html_url: "https://github.com/usuario/blog-cms",
-      homepage: null,
-      language: "Python",
-      stargazers_count: 34,
-      forks_count: 9,
-      topics: ["django", "python", "cms", "blog"]
-    },
-    {
-      id: 5,
-      name: "Portfolio Website",
-      description: "Site de portfólio responsivo desenvolvido com React e Tailwind CSS. Design moderno com animações suaves e otimizado para SEO.",
-      html_url: "https://github.com/usuario/portfolio-website",
-      homepage: "https://meuportfolio.com",
-      language: "JavaScript",
-      stargazers_count: 89,
-      forks_count: 23,
-      topics: ["react", "tailwindcss", "portfolio", "responsive"]
-    },
-    {
-      id: 6,
-      name: "API REST Node.js",
-      description: "API RESTful robusta com autenticação JWT, validação de dados, documentação Swagger e testes automatizados.",
-      html_url: "https://github.com/usuario/nodejs-api",
-      homepage: null,
-      language: "JavaScript",
-      stargazers_count: 52,
-      forks_count: 18,
-      topics: ["nodejs", "express", "jwt", "api", "swagger"]
-    }
+
   ]
 
   useEffect(() => {
